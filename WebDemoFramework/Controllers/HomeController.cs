@@ -3,11 +3,21 @@ using SH = WebDemoFramework.Models.SessionHelper;
 
 namespace WebDemoFramework.Controllers {
   public class HomeController : Controller {
-    public static int Number = 0;
+    public static int 總瀏覽次數 = 0;
+
     public ActionResult Index() {
-      SH.Count ??= 0;
-      SH.Count++;
-      return View();
+      總瀏覽次數++;
+
+      //取 session 值
+      var sessionValue = Session["我的瀏覽次數"];
+      if (sessionValue is null) {
+        //存 session 值
+        Session["我的瀏覽次數"] = 0;
+      }
+
+      SH.我的瀏覽次數++;
+
+      return View(總瀏覽次數);
     }
 
     public ActionResult About() {
