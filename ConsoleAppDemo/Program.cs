@@ -3,10 +3,10 @@
 namespace ConsoleAppDemo {
   internal class Program {
     /// <summary> 要執行的動作 </summary>
-    private static readonly EnumDemo Action = EnumDemo.None;
+    private static readonly EnumDemo Action = EnumDemo.三元運算子_TernaryOperator;
 
     static void Main(string[] args) {
-      DemoFactory.DemoServices[Action]().Run();
+      new DemoFactory().Services[Action]().Run();
 
       Console.WriteLine();
       Console.WriteLine($"{Action} 執行結束，輸入任意鍵繼續...");
