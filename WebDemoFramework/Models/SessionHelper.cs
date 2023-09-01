@@ -1,5 +1,4 @@
-﻿using LibraryFramework.Services;
-using SA = LibraryFramework.Services.SessionAccessor;
+﻿using SA = LibraryFramework.Services.SessionAccessor;
 
 namespace WebDemoFramework.Models {
   public static class SessionHelper {

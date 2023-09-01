@@ -18,7 +18,7 @@ namespace ConsoleAppDemo.Demo {
       string normal = "你普普";
       string poor = "你就爛";
 
-   
+
 
       //一般方法
       string GetComment(int pScore) {
