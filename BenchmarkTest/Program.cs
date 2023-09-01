@@ -1,4 +1,4 @@
-﻿using MyLibrary.Services;
+﻿using Library.Services;
 #if RELEASE
 using BenchmarkDotNet.Running;
 using System.Reflection;

@@ -1,4 +1,4 @@
-﻿namespace MyLibrary.Services {
+﻿namespace Library.Services {
   public interface IRun {
     /// <summary>
     /// 實際呼叫結果

@@ -1,6 +1,6 @@
 ﻿using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Jobs;
-using MyLibrary.Extensions;
+using Library.Extensions;
 
 namespace BenchmarkTest.ToTest {
   /// <summary>

@@ -1,4 +1,4 @@
-﻿using MyLibrary.Services;
+﻿using Library.Services;
 
 namespace ConsoleAppDemo {
   internal class Program {

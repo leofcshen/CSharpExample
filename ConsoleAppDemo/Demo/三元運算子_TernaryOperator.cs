@@ -1,4 +1,4 @@
-﻿using MyLibrary.Extensions;
+﻿using Library.Extensions;
 
 namespace ConsoleAppDemo.Demo {
   internal class 三元運算子_TernaryOperator : DemoBase {

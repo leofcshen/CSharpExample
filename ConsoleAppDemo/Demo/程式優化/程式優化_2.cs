@@ -1,4 +1,4 @@
-﻿using MyLibrary.Extensions;
+﻿using Library.Extensions;
 
 namespace ConsoleAppDemo.Demo {
   internal class 程式優化_2 : DemoBase {

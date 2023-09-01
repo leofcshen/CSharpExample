@@ -1,4 +1,4 @@
-﻿using MyLibrary.Extensions;
+﻿using Library.Extensions;
 using System.Reflection;
 
 namespace ConsoleAppDemo.Demo {
