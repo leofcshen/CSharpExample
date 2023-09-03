@@ -1,6 +1,6 @@
 ﻿using Library.Extensions;
 
-namespace ConsoleAppDemo.Demo {
+namespace ConsoleApp.Demo {
   internal class Method_方法 : DemoBase {
     public override void Run() {
       //輸入西元年回傳民國年

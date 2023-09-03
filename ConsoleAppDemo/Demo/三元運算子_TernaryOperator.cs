@@ -1,6 +1,6 @@
 ﻿using Library.Extensions;
 
-namespace ConsoleAppDemo.Demo {
+namespace ConsoleApp.Demo {
   internal class 三元運算子_TernaryOperator : DemoBase {
     public override void Run() {
       //一般方法

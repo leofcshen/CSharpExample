@@ -1,6 +1,6 @@
 ﻿using Library.Extensions;
 
-namespace ConsoleAppDemo.Demo {
+namespace ConsoleApp.Demo {
   internal class 程式優化_2 : DemoBase {
     public override void Run() {
 

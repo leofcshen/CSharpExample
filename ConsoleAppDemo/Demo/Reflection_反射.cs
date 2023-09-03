@@ -1,7 +1,7 @@
 ﻿using Library.Extensions;
 using System.Reflection;
 
-namespace ConsoleAppDemo.Demo {
+namespace ConsoleApp.Demo {
   internal class Reflection_反射 : DemoBase {
     /// <summary> NameSpace1 </summary>
     private static readonly string NameSpace1 = typeof(Reflection_反射).Namespace;
@@ -12,7 +12,7 @@ namespace ConsoleAppDemo.Demo {
     private static readonly string ClassName = MethodBase.GetCurrentMethod().DeclaringType.Name;
 
     public Reflection_反射() {
-      NameSpace2 = this.GetType().Namespace;
+      NameSpace2 = GetType().Namespace;
     }
 
     public override void Run() {

@@ -1,4 +1,4 @@
-﻿namespace ConsoleAppDemo.Demo {
+﻿namespace ConsoleApp.Demo {
   internal class 程式優化_1 : DemoBase {
     public override void Run() {
       BinaryTree binaryTree = new BinaryTree();
@@ -50,7 +50,7 @@
     public Node Root { get; set; }
 
     public bool Add(int value) {
-      Node before = null, after = this.Root;
+      Node before = null, after = Root;
 
       while (after != null) {
         before = after;
@@ -67,8 +67,8 @@
       Node newNode = new Node();
       newNode.Data = value;
 
-      if (this.Root == null)//Tree is empty
-        this.Root = newNode;
+      if (Root == null)//Tree is empty
+        Root = newNode;
       else {
         if (value < before.Data)
           before.LeftNode = newNode;
@@ -80,11 +80,11 @@
     }
 
     public Node Find(int value) {
-      return this.Find(value, this.Root);
+      return Find(value, Root);
     }
 
     public void Remove(int value) {
-      this.Root = Remove(this.Root, value);
+      Root = Remove(Root, value);
     }
 
     private Node Remove(Node parent, int key) {
@@ -136,7 +136,7 @@
     }
 
     public int GetTreeDepth() {
-      return this.GetTreeDepth(this.Root);
+      return GetTreeDepth(Root);
     }
 
     private int GetTreeDepth(Node parent) {

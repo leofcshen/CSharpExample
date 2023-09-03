@@ -1,6 +1,6 @@
 ﻿using Library.Services;
 
-namespace ConsoleAppDemo {
+namespace ConsoleApp {
   internal class Program {
     /// <summary> 切換要執行的動作 </summary>
     private static readonly EnumDemo Action = EnumDemo.None;

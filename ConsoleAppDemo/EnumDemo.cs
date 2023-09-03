@@ -1,4 +1,4 @@
-﻿namespace ConsoleAppDemo {
+﻿namespace ConsoleApp {
   public enum EnumDemo {
     None,
     三元運算子_TernaryOperator,
