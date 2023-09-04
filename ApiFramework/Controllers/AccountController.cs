@@ -1,15 +1,21 @@
-﻿using System.Web.Http;
+﻿using System.Net;
+using System.Web;
+using System.Web.Http;
 
 namespace ApiFramework.Controllers {
   public class AccountController : ApiController {
-    //[HttpPost]
-    //public string Get(string a) => $"Get {a}";
+    public IHttpActionResult Get(string a) {
+      if (HttpContext.Current.Request.ContentType != "application/json") {
+        return BadRequest("錯誤 ContentType 需為 application/json");
+      }
+      return Ok($"Get {a}");
+    }
 
-
-    //public string Post(string a) => $"Post {a}";
-
-    [HttpPost]
-    public string MyApi(string a) => "MyApi";
-
+    public IHttpActionResult Post(string a) {
+      if (Request.Content.Headers.ContentType?.MediaType != "application/json") {
+        throw new HttpResponseException(HttpStatusCode.BadRequest);
+      }
+      return Ok($"Post {a}");
+    }
   }
 }

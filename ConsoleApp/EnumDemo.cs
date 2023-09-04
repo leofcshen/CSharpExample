@@ -7,5 +7,6 @@
     程式優化_2,
     Reflection_反射,
     程式優化_1,
+    TypeGetType,
   }
 }
