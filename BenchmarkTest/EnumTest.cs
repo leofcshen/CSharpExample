@@ -2,5 +2,6 @@
   public enum EnumTest {
     FastStringCreation,
     StringArraySlice,
+    MyTest,
   }
 }
