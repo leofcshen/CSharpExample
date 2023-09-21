@@ -1,7 +1,6 @@
 ﻿using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Jobs;
 using Library.Extensions;
-using System.Text;
 
 namespace BenchmarkTest.ToTest {
   [MemoryDiagnoser]
@@ -18,17 +17,7 @@ namespace BenchmarkTest.ToTest {
 
     [Benchmark]
     [ArgumentsSource(nameof(GetParameters))]
-    public string StringBuild(List<string> list) {
-      StringBuilder sb = new StringBuilder();
-
-      for (int i = 0; i < list.Count; i++) {
-        sb.Append('\'').Append(list[i]).Append('\'');
-        if (i < list.Count - 1)
-          sb.Append(',');
-      }
-
-      return sb.ToString();
-    }
+    public string StringJoin1(List<string> list) => string.Join(",", list.Select(s => $"'{s}'"));
 
     public override void Run() {
       var data = GetParameters();
@@ -37,7 +26,7 @@ namespace BenchmarkTest.ToTest {
         paramSet.Dump();
 
         Print(nameof(StringJoin), StringJoin(paramSet));
-        Print(nameof(StringBuild), StringBuild(paramSet));
+        Print(nameof(StringJoin1), StringJoin1(paramSet));
         Console.WriteLine(new string('*', 100));
       }
     }
