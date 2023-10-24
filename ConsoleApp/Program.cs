@@ -13,7 +13,7 @@ namespace ConsoleApp {
       }
 
       Console.WriteLine();
-      Console.WriteLine($"{Action} 執行結束，輸入任意鍵離開...");
+      Console.WriteLine($"[{Action}] 執行結束，輸入任意鍵離開...");
       Console.ReadKey();
     }
   }

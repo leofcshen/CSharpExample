@@ -9,5 +9,6 @@
     程式優化_1,
     TypeGetType,
     ThrowException_拋錯,
+    Debug_偵錯,
   }
 }
