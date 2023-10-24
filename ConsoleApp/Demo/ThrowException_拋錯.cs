@@ -1,6 +1,9 @@
-﻿namespace ConsoleApp.Demo {
+﻿using System.Diagnostics;
+
+namespace ConsoleApp.Demo {
   internal class ThrowException_拋錯 : DemoBase {
     public override void Run() {
+      Debug.WriteLine("aa");
       try {
         Aoo aoo = new();
         aoo.DoSomethingInAoo();
