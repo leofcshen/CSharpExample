@@ -28,6 +28,8 @@ namespace ConsoleApp.Demo {
       try {
         coo.DoSomethingInCoo();
       } catch (Exception ex) {
+        Console.WriteLine(ex);
+
         //throw ex 會重置呼叫堆疊，造成確切發生例外的位置遺失。
         //throw ex;
         throw;
@@ -46,7 +48,7 @@ namespace ConsoleApp.Demo {
     public void DoSomethingInDoo() {
       int i = 0;
       //exception occured
-      i = 1 / i;
+      int _ = 1 / i;
     }
   }
 }
