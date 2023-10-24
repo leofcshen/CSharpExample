@@ -16,6 +16,7 @@ namespace ConsoleApp.Demo {
 
   public class Aoo {
     public Boo boo = new();
+
     public void DoSomethingInAoo() {
       boo.DoSomethingInBoo();
     }
@@ -23,6 +24,7 @@ namespace ConsoleApp.Demo {
 
   public class Boo {
     public Coo coo = new();
+
     public void DoSomethingInBoo() {
       try {
         coo.DoSomethingInCoo();
@@ -38,6 +40,7 @@ namespace ConsoleApp.Demo {
 
   public class Coo {
     public Doo doo = new();
+
     public void DoSomethingInCoo() {
       doo.DoSomethingInDoo();
     }
