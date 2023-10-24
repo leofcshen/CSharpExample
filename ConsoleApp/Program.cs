@@ -2,7 +2,7 @@
 
 namespace ConsoleApp {
   internal class Program {
-    /// <summary> 切換要執行的動作 </summary>
+    /// <summary> 切換要執行的動作2 </summary>
     private static readonly EnumDemo Action = EnumDemo.TypeGetType;
 
     static void Main(string[] args) {
