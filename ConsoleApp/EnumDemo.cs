@@ -8,5 +8,6 @@
     Reflection_反射,
     程式優化_1,
     TypeGetType,
+    ThrowException_拋錯,
   }
 }

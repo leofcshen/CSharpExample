@@ -3,7 +3,7 @@
 namespace ConsoleApp {
   internal class Program {
     /// <summary> 切換要執行的動作 </summary>
-    private static readonly EnumDemo Action = EnumDemo.TypeGetType;
+    private static readonly EnumDemo Action = EnumDemo.ThrowException_拋錯;
 
     static void Main(string[] args) {
       new DemoBase().Services[Action]().Run();
