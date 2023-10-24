@@ -3,7 +3,6 @@
 namespace ConsoleApp.Demo {
   internal class ThrowException_拋錯 : DemoBase {
     public override void Run() {
-      Debug.WriteLine("aa");
       try {
         Aoo aoo = new();
         aoo.DoSomethingInAoo();
@@ -28,7 +27,7 @@ namespace ConsoleApp.Demo {
       try {
         coo.DoSomethingInCoo();
       } catch (Exception ex) {
-        Console.WriteLine(ex);
+        Debug.WriteLine(ex);
 
         //throw ex 會重置呼叫堆疊，造成確切發生例外的位置遺失。
         //throw ex;
