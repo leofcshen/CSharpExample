@@ -2,7 +2,7 @@
 using BenchmarkDotNet.Jobs;
 using Library.Extensions;
 
-namespace BenchmarkTest.ToTest {
+namespace BenchmarkTest.Services {
 	/// <summary>
 	/// 方法傳入string[] 從第 start 開始擷取 number 個回傳
 	/// </summary>

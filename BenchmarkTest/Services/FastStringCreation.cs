@@ -2,7 +2,7 @@
 using BenchmarkDotNet.Jobs;
 using System.Text;
 
-namespace BenchmarkTest.ToTest {
+namespace BenchmarkTest.Services {
 	/// <summary>
 	/// 方法傳入一串文字回傳屏蔽第四碼後的文字 Pas*********
 	/// </summary>

@@ -2,7 +2,7 @@
 using BenchmarkDotNet.Jobs;
 using Library.Extensions;
 
-namespace BenchmarkTest.ToTest {
+namespace BenchmarkTest.Services {
 	[MemoryDiagnoser]
 	//[SimpleJob(RuntimeMoniker.Net48)]
 	[SimpleJob(RuntimeMoniker.Net60)]

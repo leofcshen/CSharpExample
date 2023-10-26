@@ -6,15 +6,8 @@ using System.Reflection;
 #endif
 
 namespace BenchmarkTest {
-	public enum EnumTest {
-		FastStringCreation,
-		StringArraySlice,
-		MyTest,
-	}
-
 	internal class Program {
-		/// <summary> 切換要執行或測試的類別 </summary>
-		private static readonly EnumTest Action = EnumTest.FastStringCreation;
+		private static readonly EnumServices Action = EnumServices.FastStringCreation;
 
 		static void Main(string[] args) {
 #if RELEASE
@@ -33,8 +26,14 @@ namespace BenchmarkTest {
 		}
 	}
 
-	public class ServiceBase : AbstractService<EnumTest> {
-		public ServiceBase() : base("ToTest") { }
+	public class ServiceBase : AbstractService<EnumServices> {
+		public ServiceBase() : base("Services") { }
 		public override void Run() { }
+	}
+
+	public enum EnumServices {
+		FastStringCreation,
+		StringArraySlice,
+		MyTest,
 	}
 }

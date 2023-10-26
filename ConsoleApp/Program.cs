@@ -1,22 +1,8 @@
 ﻿using Library.Services;
 
 namespace ConsoleApp {
-	public enum EnumDemo {
-		None,
-		三元運算子_TernaryOperator,
-		三元運算子_TernaryOperator_多層,
-		Method_方法,
-		程式優化_2,
-		Reflection_反射,
-		程式優化_1,
-		TypeGetType,
-		ThrowException_拋錯,
-		Debug_偵錯,
-	}
-
 	internal class Program {
-		/// <summary> 切換要執行的動作 </summary>
-		private static readonly EnumDemo Action = EnumDemo.None;
+		private static readonly EnumServices Action = EnumServices.None;
 
 		static void Main() {
 			try {
@@ -31,8 +17,21 @@ namespace ConsoleApp {
 		}
 	}
 
-	public class ServiceBase : AbstractService<EnumDemo> {
+	public class ServiceBase : AbstractService<EnumServices> {
 		public ServiceBase() : base("Demo") { }
 		public override void Run() { }
+	}
+
+	public enum EnumServices {
+		None,
+		三元運算子_TernaryOperator,
+		三元運算子_TernaryOperator_多層,
+		Method_方法,
+		程式優化_2,
+		Reflection_反射,
+		程式優化_1,
+		TypeGetType,
+		ThrowException_拋錯,
+		Debug_偵錯,
 	}
 }
