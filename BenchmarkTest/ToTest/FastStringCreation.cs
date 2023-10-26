@@ -12,6 +12,7 @@ namespace BenchmarkTest.ToTest {
 	public class FastStringCreation : ServiceBase {
 		//Benchmark 測試用的參數必須為常數
 		private const string TestValue = "Password123!";
+
 		/// <summary>
 		/// 幼稚園方法
 		/// <para>記憶體耗費 400 B</para>
