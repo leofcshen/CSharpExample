@@ -6,7 +6,7 @@
 		void Run();
 	}
 
-	public abstract class DemoServicess<TEnum> : IRun {
+	public abstract class DemoServicess<TEnum> : IRun where TEnum : notnull {
 		public readonly Dictionary<TEnum, Func<IRun>> Services = new();
 
 		public abstract void Run();
