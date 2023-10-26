@@ -6,7 +6,7 @@ using System.Reflection;
 namespace BenchmarkTest {
 	internal class Program {
 		/// <summary> 切換要執行或測試的類別 </summary>
-		private static readonly EnumTest Action = EnumTest.MyTest;
+		private static readonly EnumTest Action = EnumTest.FastStringCreation;
 
 		static void Main(string[] args) {
 #if RELEASE
@@ -19,7 +19,7 @@ namespace BenchmarkTest {
 #endif
 
 #if DEBUG
-			new ServiceBase().Services[Action]().Run();
+			new ServiceBase("ToTest").Services[Action]().Run();
 			Console.ReadLine();
 #endif
 		}

@@ -2,7 +2,7 @@
 
 namespace BenchmarkTest {
 	public class ServiceBase : DemoServices<EnumTest> {
-		public ServiceBase() : base("ToTest") { }
+		public ServiceBase(string input) : base(input) { }
 		public override void Run() { }
 	}
 }

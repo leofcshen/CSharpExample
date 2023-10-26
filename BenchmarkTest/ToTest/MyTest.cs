@@ -7,6 +7,8 @@ namespace BenchmarkTest.ToTest {
 	//[SimpleJob(RuntimeMoniker.Net48)]
 	[SimpleJob(RuntimeMoniker.Net60)]
 	public class MyTest : ServiceBase {
+		public MyTest(string input) : base(input) { }
+
 		public static IEnumerable<List<string>> GetParameters() {
 			yield return new List<string> { "Student1", "Student2", "Student3", "Student4", "Student5", "Student6", "Student7" };
 		}

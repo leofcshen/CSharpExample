@@ -10,6 +10,8 @@ namespace BenchmarkTest.ToTest {
 	[SimpleJob(RuntimeMoniker.Net60)]
 	[MemoryDiagnoser]
 	public class FastStringCreation : ServiceBase {
+		public FastStringCreation(string name) : base(name) { }
+
 		//Benchmark 測試用的參數必須為常數
 		private const string TestValue = "Password123!";
 

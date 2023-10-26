@@ -15,9 +15,7 @@
 		/// 建構函式
 		/// </summary>
 		/// <param name="namespaceSegment">類別所在的子資料夾</param>
-		public DemoServices(string namespaceSegment) {
-			CreateServices(namespaceSegment);
-		}
+		public DemoServices(string namespaceSegment) { CreateServices(namespaceSegment); }
 
 		/// <summary>
 		/// 使用列舉產生  Services
@@ -30,7 +28,7 @@
 			foreach (TEnum className in Enum.GetValues(typeof(TEnum))) {
 				Type? type = Type.GetType($"{projcetNamespace}.{namespaceSegment}.{className}, {projcetNamespace}");
 				if (type != null) {
-					var instance = Activator.CreateInstance(type) as IRun;
+					var instance = Activator.CreateInstance(type, namespaceSegment) as IRun;
 					if (typeof(IRun).IsAssignableFrom(type) && instance is not null) {
 						Services[className] = () => instance;
 					}
