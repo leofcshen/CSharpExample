@@ -15,9 +15,8 @@ namespace BenchmarkTest {
       string className = Action.ToString();
       string? nameSpace = MethodBase.GetCurrentMethod()?.DeclaringType?.Namespace;
       Type? t = Type.GetType($"{nameSpace}.ToTest.{className}");
-      if (t is not null) {
-        BenchmarkRunner.Run(t);
-      }
+
+      if (t is not null) BenchmarkRunner.Run(t);
 #endif
 
 #if DEBUG
