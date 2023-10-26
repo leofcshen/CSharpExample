@@ -4,12 +4,12 @@ using System.Reflection;
 namespace ConsoleApp.Demo {
 	internal class Reflection_反射 : DemoBase {
 		/// <summary> NameSpace1 </summary>
-		private static readonly string NameSpace1 = typeof(Reflection_反射).Namespace;
+		private static readonly string? NameSpace1 = typeof(Reflection_反射).Namespace;
 		/// <summary> NameSpace2 </summary>
-		private static string NameSpace2 { get; set; }
+		private static string? NameSpace2 { get; set; }
 
 		/// <summary> Class 名稱 </summary>
-		private static readonly string ClassName = MethodBase.GetCurrentMethod().DeclaringType.Name;
+		private static readonly string? ClassName = MethodBase.GetCurrentMethod()?.DeclaringType?.Name;
 
 		public Reflection_反射() {
 			NameSpace2 = GetType().Namespace;
@@ -21,7 +21,7 @@ namespace ConsoleApp.Demo {
 
 			ClassName.Dump(nameof(ClassName));
 
-			string methodName = MethodBase.GetCurrentMethod().Name;
+			string? methodName = MethodBase.GetCurrentMethod()?.Name;
 			methodName.Dump(nameof(methodName));
 		}
 	}

@@ -71,7 +71,8 @@ dotnet_code_quality_unused_parameters = all
 dotnet_remove_unnecessary_suppression_exclusions = none
 
 # 新行喜好設定
-dotnet_style_allow_multiple_blank_lines_experimental = false
+# 多個空行報錯
+dotnet_style_allow_multiple_blank_lines_experimental = false:error
 dotnet_style_allow_statement_immediately_after_block_experimental = true
 
 #### C# 編碼慣例 ####

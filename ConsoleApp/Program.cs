@@ -5,7 +5,7 @@ namespace ConsoleApp {
 		/// <summary> 切換要執行的動作 </summary>
 		private static readonly EnumDemo Action = EnumDemo.None;
 
-		static void Main(string[] args) {
+		static void Main() {
 			try {
 				new DemoBase().Services[Action]().Run();
 			} catch (Exception ex) {
