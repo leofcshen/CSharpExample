@@ -1,9 +1,17 @@
-﻿#if RELEASE
+﻿using Library.Services;
+
+#if RELEASE
 using BenchmarkDotNet.Running;
 using System.Reflection;
 #endif
 
 namespace BenchmarkTest {
+	public enum EnumTest {
+		FastStringCreation,
+		StringArraySlice,
+		MyTest,
+	}
+
 	internal class Program {
 		/// <summary> 切換要執行或測試的類別 </summary>
 		private static readonly EnumTest Action = EnumTest.FastStringCreation;
@@ -19,9 +27,14 @@ namespace BenchmarkTest {
 #endif
 
 #if DEBUG
-			new ServiceBase("ToTest").Services[Action]().Run();
+			new ServiceBase().Services[Action]().Run();
 			Console.ReadLine();
 #endif
 		}
+	}
+
+	public class ServiceBase : AbstractService<EnumTest> {
+		public ServiceBase() : base("ToTest") { }
+		public override void Run() { }
 	}
 }

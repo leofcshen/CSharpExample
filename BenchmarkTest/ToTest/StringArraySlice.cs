@@ -10,8 +10,6 @@ namespace BenchmarkTest.ToTest {
 	[SimpleJob(RuntimeMoniker.Net48)]
 	[SimpleJob(RuntimeMoniker.Net60)]
 	public class StringArraySlice : ServiceBase {
-		public StringArraySlice(string input) : base(input) { }
-
 		//設定兩組 benchmark 要測試的資料
 		public static IEnumerable<object[]> GetParameters() {
 			yield return new object[] { new string[] { "Student1", "Student2", "Student3", "Student4", "Student5", "Student6" }, 2, 2 };
