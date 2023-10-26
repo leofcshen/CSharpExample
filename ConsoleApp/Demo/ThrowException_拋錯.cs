@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 
 namespace ConsoleApp.Demo {
-	internal class ThrowException_拋錯 : DemoBase {
+	internal class ThrowException_拋錯 : ServiceBase {
 		public override void Run() {
 			try {
 				Aoo aoo = new();

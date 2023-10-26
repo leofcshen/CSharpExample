@@ -1,7 +1,7 @@
 ﻿using Library.Extensions;
 
 namespace ConsoleApp.Demo {
-	internal class 三元運算子_TernaryOperator_多層 : DemoBase {
+	internal class 三元運算子_TernaryOperator_多層 : ServiceBase {
 		public override void Run() {
 			int scorePro = 90;
 			int scoreGood = 70;

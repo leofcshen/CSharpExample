@@ -2,7 +2,7 @@
 using System.Reflection;
 
 namespace ConsoleApp.Demo {
-	internal class TypeGetType : DemoBase {
+	internal class TypeGetType : ServiceBase {
 		public override void Run() {
 			//取得所有組件，有引用的都會列出來
 			var allAssembly = AppDomain.CurrentDomain.GetAssemblies().OrderBy(x => x.FullName);

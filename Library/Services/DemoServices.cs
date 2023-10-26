@@ -6,7 +6,7 @@
 		void Run();
 	}
 
-	public abstract class DemoServicess<TEnum> : IRun where TEnum : notnull {
+	public abstract class DemoServices<TEnum> : IRun where TEnum : notnull {
 		public readonly Dictionary<TEnum, Func<IRun>> Services = new();
 
 		public abstract void Run();
@@ -15,7 +15,7 @@
 		/// 建構函式
 		/// </summary>
 		/// <param name="namespaceSegment">類別所在的子資料夾</param>
-		public DemoServicess(string namespaceSegment) {
+		public DemoServices(string namespaceSegment) {
 			CreateServices(namespaceSegment);
 		}
 

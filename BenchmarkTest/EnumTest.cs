@@ -1,7 +1,7 @@
 ﻿namespace BenchmarkTest {
-  public enum EnumTest {
-    FastStringCreation,
-    StringArraySlice,
-    MyTest,
-  }
+	public enum EnumTest {
+		FastStringCreation,
+		StringArraySlice,
+		MyTest,
+	}
 }

@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 
 namespace ConsoleApp.Demo {
-	internal class Debug_偵錯 : DemoBase {
+	internal class Debug_偵錯 : ServiceBase {
 		public override void Run() {
 			string message = "This is test.";
 			Console.WriteLine(message);

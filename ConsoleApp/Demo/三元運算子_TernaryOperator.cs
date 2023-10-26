@@ -1,7 +1,7 @@
 ﻿using Library.Extensions;
 
 namespace ConsoleApp.Demo {
-	internal class 三元運算子_TernaryOperator : DemoBase {
+	internal class 三元運算子_TernaryOperator : ServiceBase {
 		public override void Run() {
 			//一般方法
 			string GetComment(int pScore) {

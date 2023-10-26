@@ -1,7 +1,7 @@
 ﻿using Library.Extensions;
 
 namespace ConsoleApp.Demo {
-	internal class Method_方法 : DemoBase {
+	internal class Method_方法 : ServiceBase {
 		public override void Run() {
 			//輸入西元年回傳民國年
 			#region -- 一般方法 --
@@ -12,8 +12,6 @@ namespace ConsoleApp.Demo {
 			int year2000ToROC = GetRocYear(year2000);
 			year2000ToROC.Dump(nameof(year2000ToROC));
 			#endregion
-
-
 
 			#region -- 回傳多個值
 			#region -- 使用 out --

@@ -2,7 +2,7 @@
 using System.Reflection;
 
 namespace ConsoleApp.Demo {
-	internal class Reflection_反射 : DemoBase {
+	internal class Reflection_反射 : ServiceBase {
 		/// <summary> NameSpace1 </summary>
 		private static readonly string? NameSpace1 = typeof(Reflection_反射).Namespace;
 		/// <summary> NameSpace2 </summary>

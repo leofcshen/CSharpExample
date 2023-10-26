@@ -1,7 +1,7 @@
 ﻿using Library.Extensions;
 
 namespace ConsoleApp.Demo {
-	internal class 程式優化_2 : DemoBase {
+	internal class 程式優化_2 : ServiceBase {
 		public override void Run() {
 
 			#region -- 原型 --

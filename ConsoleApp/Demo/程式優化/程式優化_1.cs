@@ -1,5 +1,5 @@
 ﻿namespace ConsoleApp.Demo {
-	internal class 程式優化_1 : DemoBase {
+	internal class 程式優化_1 : ServiceBase {
 		public override void Run() {
 			BinaryTree binaryTree = new BinaryTree();
 
