@@ -10,16 +10,14 @@ namespace LibraryFramework.Services {
 		/// <summary>
 		/// 存值
 		/// </summary>
-		public static void Set<T>(T value, [CallerMemberName] string sessionName = "") {
-			HttpContext.Current.Session[sessionName] = value;
-		}
+		public static void Set<T>(T value, [CallerMemberName] string sessionName = "")
+			=> HttpContext.Current.Session[sessionName] = value;
 
 		/// <summary>
 		/// 取值
 		/// </summary>
-		public static T Get<T>([CallerMemberName] string sessionName = "") {
-			return (T)HttpContext.Current.Session[sessionName];
-		}
+		public static T Get<T>([CallerMemberName] string sessionName = "")
+			=> (T)HttpContext.Current.Session[sessionName];
 		#endregion
 	}
 }
