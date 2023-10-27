@@ -1,3 +1,5 @@
+using WebDemo.Models;
+
 namespace WebDemo {
 	public class Program {
 		public static void Main(string[] args) {
@@ -10,6 +12,14 @@ namespace WebDemo {
 			builder.Services.AddSession();
 			builder.Services.AddHttpContextAccessor();
 			//builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+			// 取 AppSettings 基本方法
+			builder.Services.Configure<AppSettings>(builder.Configuration.GetSection(nameof(AppSettings)));
+
+			// 取 AppSettings 使用靜態物件
+			//var provider = builder.Services.BuildServiceProvider();
+			//var configuration = provider.GetService<IConfiguration>();
+			//AppSettingsNew.Age = configuration.GetValue<int>($"{nameof(AppSettingsNew)}:{nameof(AppSettingsNew.Age)}");
 
 			var app = builder.Build();
 
