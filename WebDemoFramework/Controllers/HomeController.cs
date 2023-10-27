@@ -40,7 +40,6 @@ namespace WebDemoFramework.Controllers {
 				{ "John 股份有限公司", "john.myproduct.com" },
 			};
 
-
 			var domain = Request.Url.Host;
 
 			string companyName = SpecialDomain.FirstOrDefault(x => x.Value == domain).Key;
