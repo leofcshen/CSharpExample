@@ -22,6 +22,8 @@ namespace WebDemo.Controllers {
 
 			var se2 = new MySession(_httpContextAccessor);
 			var name2 = se2.Name;
+			Debug.Assert(name2 == "Tom");
+
 			return View();
 		}
 
