@@ -5,7 +5,6 @@ using System.Text.Json;
 namespace WebDemo.Models {
 	public class SessionAccessor {
 		private readonly IHttpContextAccessor _contextAccessor;
-
 		public SessionAccessor(IHttpContextAccessor contextAccessor) {
 			_contextAccessor = contextAccessor;
 		}
