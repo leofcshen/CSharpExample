@@ -2,8 +2,11 @@ using WebDemo.Models;
 
 namespace WebDemo {
 	public class Program {
+		private static WebApplicationBuilder? _appBuilder;
+		private static WebApplicationBuilder AppBuilder { get => _appBuilder ?? throw new NullReferenceException($"{nameof(Program)}.{nameof(_appBuilder)}不應為null"); }
+
 		public static void Main(string[] args) {
-			var builder = WebApplication.CreateBuilder(args);
+			var builder = _appBuilder = WebApplication.CreateBuilder(args);
 
 			// Add services to the container.
 			builder.Services.AddControllersWithViews();
@@ -19,7 +22,7 @@ namespace WebDemo {
 			// 取 AppSettings 使用靜態物件
 			//var provider = builder.Services.BuildServiceProvider();
 			//var configuration = provider.GetService<IConfiguration>();
-			//AppSettingsNew.Age = configuration.GetValue<int>($"{nameof(AppSettingsNew)}:{nameof(AppSettingsNew.Age)}");
+			///AppSettingsNew.Age = configuration.GetValue<int>($"{nameof(AppSettingsNew)}:{nameof(AppSettingsNew.Age)}");
 
 			var app = builder.Build();
 
@@ -46,5 +49,8 @@ namespace WebDemo {
 
 			app.Run();
 		}
+
+		internal static T ConfigMapping<T>()
+			=> AppBuilder.Configuration.Get<T>();
 	}
 }

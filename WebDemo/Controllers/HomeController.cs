@@ -34,13 +34,18 @@ namespace WebDemo.Controllers {
 
 			#region -- 測試 config --
 			var a = _appSettings.Url;
-			_appSettings.Url = "a";
+			//_appSettings.Url = "a";
 			var cc = _appSettings.Url;
+
 			var b = _appSettings.Username;
 			var c = _appSettings.Password;
 			var d = _appSettings.Age;
 			//var e = AppSettingsNew.Age;
 			#endregion
+			var k = Config.Body.AppSettings.Url;
+			//Config.Body.AppSettings.Url = "al";
+
+			var kk = Config.Body.AppSettings.Url;
 
 			return View();
 		}
