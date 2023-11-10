@@ -11,11 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryFramework", "Library
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDemoFramework", "WebDemoFramework\WebDemoFramework.csproj", "{E4B13660-FEBD-4FAF-AB3C-99CF796BA7A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiFramework", "ApiFramework\ApiFramework.csproj", "{704EA185-832F-4A2F-86B7-930E953DDCFB}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenchmarkTest", "BenchmarkTest\BenchmarkTest.csproj", "{1B948578-7075-4A7B-A52F-A411B76C03E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDemo", "WebDemo\WebDemo.csproj", "{08DDCAEE-5F92-4165-A3C0-B920DA98F437}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebDemo", "WebDemo\WebDemo.csproj", "{08DDCAEE-5F92-4165-A3C0-B920DA98F437}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +37,6 @@ Global
 		{E4B13660-FEBD-4FAF-AB3C-99CF796BA7A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4B13660-FEBD-4FAF-AB3C-99CF796BA7A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4B13660-FEBD-4FAF-AB3C-99CF796BA7A6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{704EA185-832F-4A2F-86B7-930E953DDCFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{704EA185-832F-4A2F-86B7-930E953DDCFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{704EA185-832F-4A2F-86B7-930E953DDCFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{704EA185-832F-4A2F-86B7-930E953DDCFB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1B948578-7075-4A7B-A52F-A411B76C03E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1B948578-7075-4A7B-A52F-A411B76C03E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B948578-7075-4A7B-A52F-A411B76C03E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
