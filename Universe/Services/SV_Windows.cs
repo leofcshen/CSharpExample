@@ -1,6 +1,6 @@
 ﻿namespace Universe.Services;
 
-#region -- 產生編輯hosts捷徑到桌面 --
+#region -- 產生編輯 hosts 捷徑到桌面 --
 public static partial class SV_Windows {
   [ComImport]
   [Guid("00021401-0000-0000-C000-000000000046")]
@@ -53,7 +53,7 @@ public static partial class SV_Windows {
   [ComImport]
   [Guid("45E2B4AE-B1C3-11D0-B92F-00A0C90312E1")]
   [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-  internal partial interface IShellLinkDataList {
+  internal interface IShellLinkDataList {
     void AddDataBlock(IntPtr pDataBlock);
     void CopyDataBlock(uint dwSig, out IntPtr ppDataBlock);
     void RemoveDataBlock(uint dwSig);
@@ -62,7 +62,7 @@ public static partial class SV_Windows {
   }
 
   public static void Run_產生編輯hosts捷徑到桌面() {
-    string shortcutPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Edit-hosts1.lnk");
+    string shortcutPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Edit-hosts.lnk");
 
     if (File.Exists(shortcutPath)) {
       throw new IOException($"捷徑已存在_{shortcutPath}");
