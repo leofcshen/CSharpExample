@@ -4,59 +4,61 @@ using System.Diagnostics;
 using WebDemo.Models;
 
 namespace WebDemo.Controllers {
-	public class HomeController : Controller {
-		private readonly ILogger<HomeController> _logger;
-		private readonly IHttpContextAccessor _httpContextAccessor;
-		private readonly AppSettings _appSettings;
+  public class HomeController : Controller {
+    private readonly ILogger<HomeController> _logger;
+    private readonly IHttpContextAccessor _httpContextAccessor;
+    private readonly AppSettings _appSettings;
 
-		public HomeController(
-			ILogger<HomeController> logger,
-			IHttpContextAccessor httpContextAccessor,
-			IOptions<AppSettings> options) {
-			_logger = logger;
-			_httpContextAccessor = httpContextAccessor;
-			_appSettings = options.Value;
-		}
+    public HomeController(
+      ILogger<HomeController> logger,
+      IHttpContextAccessor httpContextAccessor,
+      IOptions<AppSettings> options) {
+      _logger = logger;
+      _httpContextAccessor = httpContextAccessor;
+      _appSettings = options.Value;
+    }
 
-		public IActionResult Index() {
-			#region -- 測試 Session --
-			string name = "Tom";
+    public IActionResult Index() {
+      Session.Name ??= "Tom" + DateTime.Now;
 
-			var se1 = new MySession(_httpContextAccessor);
-			se1.Name = "Tom";
-			var sessionName1 = se1.Name;
-			Debug.Assert(sessionName1 == name);
+      #region -- 測試 Session --
+      //string name = "Tom";
 
-			var se2 = new MySession(_httpContextAccessor);
-			var sessionName2 = se2.Name;
-			Debug.Assert(sessionName2 == name);
-			#endregion
+      //var se1 = new MySession(_httpContextAccessor);
+      //se1.Name = "Tom";
+      //var sessionName1 = se1.Name;
+      //Debug.Assert(sessionName1 == name);
 
-			#region -- 測試 config --
-			var a = _appSettings.Url;
-			//_appSettings.Url = "a";
-			var cc = _appSettings.Url;
+      //var se2 = new MySession(_httpContextAccessor);
+      //var sessionName2 = se2.Name;
+      //Debug.Assert(sessionName2 == name);
+      #endregion
 
-			var b = _appSettings.Username;
-			var c = _appSettings.Password;
-			var d = _appSettings.Age;
-			//var e = AppSettingsNew.Age;
-			#endregion
-			var k = Config.Body.AppSettings.Url;
-			//Config.Body.AppSettings.Url = "al";
+      #region -- 測試 config --
+      var a = _appSettings.Url;
+      //_appSettings.Url = "a";
+      var cc = _appSettings.Url;
 
-			var kk = Config.Body.AppSettings.Url;
+      var b = _appSettings.Username;
+      var c = _appSettings.Password;
+      var d = _appSettings.Age;
+      //var e = AppSettingsNew.Age;
+      #endregion
+      var k = Config.Body.AppSettings.Url;
+      //Config.Body.AppSettings.Url = "al";
 
-			return View();
-		}
+      var kk = Config.Body.AppSettings.Url;
 
-		public IActionResult Privacy() {
-			return View();
-		}
+      return View();
+    }
 
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-		public IActionResult Error() {
-			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-		}
-	}
+    public IActionResult Privacy() {
+      return View();
+    }
+
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    public IActionResult Error() {
+      return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
+  }
 }

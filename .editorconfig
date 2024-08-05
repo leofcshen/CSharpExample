@@ -9,7 +9,7 @@ trim_trailing_whitespace = true
 
 # 縮排和間距
 indent_size = 2
-indent_style = tab
+indent_style = space
 tab_width = 2
 
 # 新行喜好設定

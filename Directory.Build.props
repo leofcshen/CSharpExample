@@ -1,0 +1,12 @@
+<Project>
+  <PropertyGroup>
+  
+    <!-- 抑制特定的警告 -->
+    <NoWarn>
+      NU1803;<!-- NuGet http 警告 -->
+      CA1416;<!-- 驗證平台相容性 -->
+      SYSLIB1096;<!-- 使用 GeneraterComInterfaceAttribue 而非 ComImportAttribute-->
+    </NoWarn>
+    
+  </PropertyGroup>
+</Project>
