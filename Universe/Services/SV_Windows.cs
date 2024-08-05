@@ -91,8 +91,11 @@ public static partial class SV_Windows {
 
 #region -- 操作資源回收筒 --
 public static partial class SV_Windows {
-  [LibraryImport("shell32.dll", EntryPoint = "SHEmptyRecycleBinW", StringMarshalling = StringMarshalling.Utf16)]
-  private static partial int SHEmptyRecycleBin(IntPtr hwnd, string? pszRootPath, uint dwFlags);
+  //[LibraryImport("shell32.dll", EntryPoint = "SHEmptyRecycleBinW", StringMarshalling = StringMarshalling.Utf16)]
+  //private static partial int SHEmptyRecycleBin(IntPtr hwnd, string? pszRootPath, uint dwFlags);
+
+  [DllImport("shell32.dll", CharSet = CharSet.Unicode, EntryPoint = "SHEmptyRecycleBinW")]
+  private static extern int SHEmptyRecycleBin(IntPtr hwnd, string? pszRootPath, uint dwFlags);
 
   const uint SHERB_NOCONFIRMATION = 0x00000001;
   const uint SHERB_NOPROGRESSUI = 0x00000002;
