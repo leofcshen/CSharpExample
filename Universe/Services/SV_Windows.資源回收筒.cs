@@ -8,6 +8,9 @@ public static partial class SV_Windows {
   [DllImport("shell32.dll", CharSet = CharSet.Unicode, EntryPoint = "SHEmptyRecycleBinW")]
   private static extern int SHEmptyRecycleBin(IntPtr hwnd, string? pszRootPath, uint dwFlags);
 
+  [DllImport("shell32.dll", CharSet = CharSet.Auto)]
+  private static extern void SHUpdateRecycleBinIcon();
+
   const uint SHERB_NOCONFIRMATION = 0x00000001;
   const uint SHERB_NOPROGRESSUI = 0x00000002;
   const uint SHERB_NOSOUND = 0x00000004;
@@ -34,9 +37,7 @@ public static partial class SV_Windows {
 
     return r;
   }
-}
 
-public class My執行結果 {
-  public bool IsSuccess { get; set; }
-  public string? Message { get; set; }
+  public static void Run刷新資源回收筒()
+    => SHUpdateRecycleBinIcon();
 }

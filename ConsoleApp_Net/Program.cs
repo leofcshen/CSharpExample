@@ -3,13 +3,13 @@
 namespace ConsoleApp_Net;
 
 internal class Program {
-	static void Main(/*string[] args*/) {
-		try {
-			SV_Windows.Run清空資源回收筒();
+  static void Main(/*string[] args*/) {
+    try {
+      SV_Windows.DeleteByDays(0);
 
-		} catch (Exception ex) {
-			Console.WriteLine(ex.Message);
-		}
-		Console.WriteLine("Hello, World!");
-	}
+    } catch (Exception ex) {
+      Console.WriteLine(ex.Message);
+    }
+    Console.WriteLine("Hello, World!");
+  }
 }
