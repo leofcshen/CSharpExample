@@ -1,19 +1,19 @@
 ﻿namespace UniverseWindows.Services;
 
-public partial class SV_Windows {
+public partial class SV_WindowsWPF {
   [STAThread]
-  public static void Run_擷圖螢幕範圍(int x1, int y1, int x2, int y2) {
-    Rectangle rectangle = new(x1, y1, x2, y2);
-    Run_擷圖螢幕範圍(rectangle);
-  }
+  public static BitmapImage Run_擷圖螢幕範圍到剪貼簿(int x, int y, int width, int height)
+    => Run_擷圖螢幕範圍到剪貼簿(new Rectangle(x, y, width, height));
 
   [STAThread]
-  public static void Run_擷圖螢幕範圍(Rectangle rectangle) {
+  public static BitmapImage Run_擷圖螢幕範圍到剪貼簿(Rectangle rectangle) {
     Bitmap bitmap = new(rectangle.Width, rectangle.Height);
-    using Graphics g = Graphics.FromImage(bitmap);
-    g.CopyFromScreen(rectangle.Location, System.Drawing.Point.Empty, rectangle.Size);
-    BitmapSource bitmapSource = ConvertBitmapToBitmapImage(bitmap);
-    Clipboard.SetImage(bitmapSource);
+    using Graphics graphics = Graphics.FromImage(bitmap);
+    graphics.CopyFromScreen(rectangle.Location, System.Drawing.Point.Empty, rectangle.Size);
+    BitmapImage bitmapImage = ConvertBitmapToBitmapImage(bitmap);
+    Clipboard.SetImage(bitmapImage);
+
+    return bitmapImage;
   }
 
   /// <summary>將 Bitmap 轉換為 BitmapImage</summary>
