@@ -21,6 +21,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Universe", "Universe\Univer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UniverseWindows", "UniverseWindows\UniverseWindows.csproj", "{950EE713-73B2-4FC1-A74B-82CA8DA8EE91}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{FEEE14F0-214A-4E00-ABEF-3B0EBE302C6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "用字串建立類別實例_介面", "Example\用字串建立類別實例_介面\用字串建立類別實例_介面.csproj", "{15920BAB-296E-4919-8A58-F13D04B823A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "用字串建立類別實例_繼承", "Example\用字串建立類別實例_繼承\用字串建立類別實例_繼承.csproj", "{59D09F5A-C5BF-4788-B479-FDD86E819CCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,9 +69,21 @@ Global
 		{950EE713-73B2-4FC1-A74B-82CA8DA8EE91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{950EE713-73B2-4FC1-A74B-82CA8DA8EE91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{950EE713-73B2-4FC1-A74B-82CA8DA8EE91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15920BAB-296E-4919-8A58-F13D04B823A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15920BAB-296E-4919-8A58-F13D04B823A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15920BAB-296E-4919-8A58-F13D04B823A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15920BAB-296E-4919-8A58-F13D04B823A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59D09F5A-C5BF-4788-B479-FDD86E819CCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59D09F5A-C5BF-4788-B479-FDD86E819CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59D09F5A-C5BF-4788-B479-FDD86E819CCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59D09F5A-C5BF-4788-B479-FDD86E819CCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{15920BAB-296E-4919-8A58-F13D04B823A3} = {FEEE14F0-214A-4E00-ABEF-3B0EBE302C6B}
+		{59D09F5A-C5BF-4788-B479-FDD86E819CCA} = {FEEE14F0-214A-4E00-ABEF-3B0EBE302C6B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5B2DADC6-BC00-42A1-BE5C-84792AF02274}
