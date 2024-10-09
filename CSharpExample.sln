@@ -23,9 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UniverseWindows", "Universe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{FEEE14F0-214A-4E00-ABEF-3B0EBE302C6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "用字串建立類別實例_介面", "Example\用字串建立類別實例_介面\用字串建立類別實例_介面.csproj", "{15920BAB-296E-4919-8A58-F13D04B823A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "用字串建立類別實例_介面", "Example\用字串建立類別實例_介面\用字串建立類別實例_介面.csproj", "{15920BAB-296E-4919-8A58-F13D04B823A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "用字串建立類別實例_繼承", "Example\用字串建立類別實例_繼承\用字串建立類別實例_繼承.csproj", "{59D09F5A-C5BF-4788-B479-FDD86E819CCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "用字串建立類別實例_繼承", "Example\用字串建立類別實例_繼承\用字串建立類別實例_繼承.csproj", "{59D09F5A-C5BF-4788-B479-FDD86E819CCA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "動態載入類別", "Example\動態載入類別\動態載入類別.csproj", "{D02002C5-8E5C-4E20-B050-67B91817F7EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "取得類別和方法名稱", "Example\取得類別和方法名稱\取得類別和方法名稱.csproj", "{35739D75-0513-4148-B4E5-136AD760E69B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +81,14 @@ Global
 		{59D09F5A-C5BF-4788-B479-FDD86E819CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59D09F5A-C5BF-4788-B479-FDD86E819CCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59D09F5A-C5BF-4788-B479-FDD86E819CCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D02002C5-8E5C-4E20-B050-67B91817F7EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D02002C5-8E5C-4E20-B050-67B91817F7EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D02002C5-8E5C-4E20-B050-67B91817F7EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D02002C5-8E5C-4E20-B050-67B91817F7EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35739D75-0513-4148-B4E5-136AD760E69B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35739D75-0513-4148-B4E5-136AD760E69B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35739D75-0513-4148-B4E5-136AD760E69B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35739D75-0513-4148-B4E5-136AD760E69B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,6 +96,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{15920BAB-296E-4919-8A58-F13D04B823A3} = {FEEE14F0-214A-4E00-ABEF-3B0EBE302C6B}
 		{59D09F5A-C5BF-4788-B479-FDD86E819CCA} = {FEEE14F0-214A-4E00-ABEF-3B0EBE302C6B}
+		{D02002C5-8E5C-4E20-B050-67B91817F7EF} = {FEEE14F0-214A-4E00-ABEF-3B0EBE302C6B}
+		{35739D75-0513-4148-B4E5-136AD760E69B} = {FEEE14F0-214A-4E00-ABEF-3B0EBE302C6B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5B2DADC6-BC00-42A1-BE5C-84792AF02274}

@@ -40,4 +40,32 @@ public static class Ext_String {
 
   public static int GetLength中文算二_2(this string str)
     => str.Sum(c => char.GetUnicodeCategory(c) == System.Globalization.UnicodeCategory.OtherLetter ? 2 : 1);
+
+  //產生 PadLeft 的擴充方法 中文算二
+  public static string GetPadLeft中文算二(this string str, int totalWidth, char paddingChar) {
+    int length = 0;
+
+    foreach (var c in str)
+      length += char.GetUnicodeCategory(c) == System.Globalization.UnicodeCategory.OtherLetter ? 2 : 1;
+
+    return str.PadLeft(totalWidth - length, paddingChar);
+  }
+
+  //產生 PadRight 的擴充方法 中文算二
+  public static string GetPadRight中文算二(this string str, int totalWidth, char paddingChar) {
+    int length = 0;
+
+    foreach (var c in str)
+      length += char.GetUnicodeCategory(c) == System.Globalization.UnicodeCategory.OtherLetter ? 2 : 1;
+
+    return str.PadRight(totalWidth - length, paddingChar);
+  }
+
+  public static string PadLeft中文算二(this string str, int totalWidth, char paddingChar) {
+    return str.PadLeft(totalWidth - str.GetLength中文算二_2(), paddingChar);
+  }
+
+  public static string PadRight中文算二(this string str, int totalWidth, char paddingChar) {
+    return str.PadRight(totalWidth - str.GetLength中文算二_2(), paddingChar);
+  }
 }

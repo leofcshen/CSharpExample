@@ -3,9 +3,11 @@
 internal class Program {
   private static readonly string _calssName = "MyTestA";
   //private static readonly string _calssName = "MyTestB";
+  //private static readonly string _calssName = "MyTestC";
   private static readonly string _parameter = "建構子參數";
 
   static void Main(/*string[] args*/) {
+    object?[] _parameter = ["Tom"];
     var @namespace = AppDomain.CurrentDomain.FriendlyName;
     string namespaceClass = $"{@namespace}.{_calssName}";
     Type? type = Type.GetType(namespaceClass) ?? throw new Exception($"找不到類別:{namespaceClass}");
