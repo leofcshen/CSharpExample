@@ -147,7 +147,7 @@ public class TestC {
   }
 
   private static void MeasurePerformance() {
-    var iterations = 1000000;
+    var iterations = 10000000;
 
     // 方法一：nameof
     var stopwatch = Stopwatch.StartNew();
