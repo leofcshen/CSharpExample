@@ -1,11 +1,17 @@
 ﻿using System.Diagnostics;
 using Universe.Extensions;
+using Universe.Services;
 
 namespace ConsoleApp_Net;
 
 internal class Program {
   static void Main(/*string[] args*/) {
     try {
+      //SV_Windows.SV_Shortcut.Create_編輯環境變數();
+      //SV_NetworkDriver.Mount(@"\\192.168.200.215\專案區\006.檔案交換區", "F", "A11084", "6084");
+      SV_NetworkDriver.Mount(@"\\192.168.200.215\專案區", "a", "A11084", "6084");
+      SV_NetworkDriver.Unmount("Z");
+      return;
       var iterations = 1000000000;
 
       // 方法一：nameof
@@ -36,6 +42,4 @@ internal class Program {
       Console.WriteLine(ex.Message);
     }
   }
-
-
 }

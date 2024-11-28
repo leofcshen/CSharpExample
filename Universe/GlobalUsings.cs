@@ -1,6 +1,8 @@
 ﻿global using CoreAudio;
+global using IWshRuntimeLibrary;
 global using Microsoft.AspNetCore.Http;
 global using System;
+global using System.Collections;
 global using System.Diagnostics;
 global using System.Management;
 global using System.Runtime.CompilerServices;
